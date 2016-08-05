@@ -106,4 +106,4 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://supplier-collaboration-eureka.azurewebsites.net/
+      defaultZone: http://supplier-collaboration-eureka.azurewebsites.net/eureka/
