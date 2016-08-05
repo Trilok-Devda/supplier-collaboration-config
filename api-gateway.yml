@@ -107,4 +107,4 @@ po-job:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://supplier-collaboration-eureka.azurewebsites.net/eureka/
+      defaultZone: http://supplier-collaboration-eureka.azurewebsites.net
