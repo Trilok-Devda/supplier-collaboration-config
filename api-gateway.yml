@@ -76,8 +76,7 @@ spring:
 # Note that we don't proxy the calls to the authorization server. The reason being that 
 # Spring cloud security would need to secure the api gateway before it can route the 
 # requests using zuul
-zuul:
-  routes:
+ routes:
     po-job: /api/job/**  
     asn-service: /api/asn/**
     po-service: /api/po/**
@@ -86,22 +85,22 @@ zuul:
     connect-timeout-millis: 1000000
     socket-timeout-millis: 6000000
 
-hystrix: 
-  command.default.execution.isolation.strategy: THREAD
-  command.default.execution.isolation.thread.timeoutInMilliseconds: 600000
-  command.default.execution.timeout.enabled: false
-  command.default.fallback.enabled: false
-  threadpool.default.coreSize: 20
+#hystrix: 
+ # command.default.execution.isolation.strategy: THREAD
+  #command.default.execution.isolation.thread.timeoutInMilliseconds: 600000
+  #command.default.execution.timeout.enabled: false
+  #command.default.fallback.enabled: false
+  #threadpool.default.coreSize: 20
   # Increase the Hystrix timeout to 60s (per service)
   #po-service.execution.isolation.thread.timeoutInMilliseconds: 60000
-po-service:
-  ribbon:
-    ReadTimeout: 600000
-    ConnectTimeout: 600000
-po-job:
-  ribbon:
-    ReadTimeout: 600000
-    ConnectTimeout: 600000 
+#po-service:
+ # ribbon:
+  #  ReadTimeout: 600000
+   # ConnectTimeout: 600000
+#po-job:
+ # ribbon:
+  #  ReadTimeout: 600000
+   # ConnectTimeout: 600000 
 
 # Define the Eureka server that handles service registration
 eureka:
