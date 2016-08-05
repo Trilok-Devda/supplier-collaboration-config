@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: development
+    active: cloud
 ---
 # Datasource and JPA configuration to be used for using the same tokenstore as the authorization server for
 # the defined resource server. Note that there can't be 2 different root nodes, so datasource falls under the "spring" node.
@@ -8,16 +8,16 @@ spring:
   profiles: development
 
 # Define the port where the API gateway server would be running
-server:
-  port: 8765 
-  compression:
-    enabled: true
-    min-response-size: 1024
-    mime-types: application/xml,application/json
-feign:
-  compression:
-    min-request-size: 1024
-    mime-types: application/xml,application/json
+#server:
+ # port: 8765 
+  #compression:
+   # enabled: true
+    #min-response-size: 1024
+    #mime-types: application/xml,application/json
+#feign:
+ # compression:
+  #  min-request-size: 1024
+   # mime-types: application/xml,application/json
 
 # Define the routes which determine what URL are serviced by what applications.
 # The application/services are defined in the bootstrap.yml file of individual applications
@@ -66,8 +66,7 @@ spring:
   profiles: cloud
 
 # Define the port where the API gateway server would be running
-server:
-  port: 8765
+
 
 
 # Define the routes which determine what URL are serviced by what applications.
@@ -108,4 +107,4 @@ po-job:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://sc-eureka-server.azurewebsites.net/eureka/
+      defaultZone: http://supplier-collaboration-eureka.azurewebsites.net/eureka/
