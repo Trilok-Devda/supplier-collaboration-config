@@ -28,15 +28,15 @@ logging:
 ---
 spring:
   profiles: default
-server:
-  compression:
-    enabled: true
-    min-response-size: 1024
-    mime-types: application/xml,application/json
-feign:
-  compression:
-    min-request-size: 1024
-    mime-types: application/xml,application/json
+#server:
+ # compression:
+  #  enabled: true
+  #  min-response-size: 1024
+ #   mime-types: application/xml,application/json
+#feign:
+#  compression:
+#    min-request-size: 1024
+#    mime-types: application/xml,application/json
 eureka:
   client:
     serviceUrl:
