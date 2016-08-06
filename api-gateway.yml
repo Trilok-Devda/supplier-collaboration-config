@@ -1,3 +1,11 @@
+spring:
+  profiles:
+    active: default
+---
+
+spring:
+  profiles: default
+  
  routes:
     po-job: /api/job/**  
     asn-service: /api/asn/**
